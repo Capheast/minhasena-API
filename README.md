@@ -1,5 +1,11 @@
 # minhasena-API
 
+## Installation
+
+- `git clone https://github.com/Capheast/minhasena-API.git`
+- `npm install`
+- `npm run dev`
+
 ## Routes
 
 
