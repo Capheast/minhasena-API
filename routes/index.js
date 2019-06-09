@@ -13,27 +13,22 @@ router.get('/generate', function (req, res, next) {
 });
 
 router.get('/setup', (req, res, next) => {
-    let setup = {}
-    setup.sorteios = {}
-
-    setup.sorteios.main = {
-        "title": "Escolha o sorteio",
-        "items": [
-            {
-                "title": "Mega Sena",
-                "subTitle": "Acerte 6 números e gannhe uma bolada",
-                "text": "Sorteio atual de R$180 milhões"
-            },
-            {
-                "title": "Quina",
-                "subTitle": "5 números para pra te ajudar nas contas",
-                "text": "Sorteio atual de R$80 mil"
-            },
-        ]
-    }
-
-    setup.sorteios.highlight = {
-        "title": "Fique de olho",
+    let setup = [
+      {"title": "Escolha o sorteio",
+    "items": [
+        {
+            "title": "Mega Sena",
+            "subTitle": "Acerte 6 números e gannhe uma bolada",
+            "text": "Sorteio atual de R$180 milhões"
+        },
+        {
+            "title": "Quina",
+            "subTitle": "5 números para pra te ajudar nas contas",
+            "text": "Sorteio atual de R$80 mil"
+        },
+    ]},
+    {
+      "title": "Fique de olho",
         "items": [
             {
                 "title": "Lotofácil",
@@ -41,9 +36,9 @@ router.get('/setup', (req, res, next) => {
                 "text": "Sorteio atual de R$420 mil"
             },
         ]
-    }
-    setup.sorteios.secondary = {
-        "title": "Outros",
+    },
+    {
+      "title": "Outros",
         "items": [
 
             {
@@ -53,6 +48,7 @@ router.get('/setup', (req, res, next) => {
             },
         ]
     }
+  ]
     res.json(setup)
 })
 
