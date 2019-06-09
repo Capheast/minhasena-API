@@ -1,19 +1,13 @@
+// import {GenerateNumbers} from '../app/controllers/GenerateNumbers.js'
+
 var express = require('express');
+var generate = require('../app/controllers/GenerateNumbers.js');
 var router = express.Router();
+
 
 /* GET home page. */
 router.get('/generate', function (req, res, next) {
-
-    let numbers = []
-
-    while (numbers.length <= 6) {
-        let generatedNumber = Math.ceil(Math.random() * 60);
-        if (!numbers.includes(generatedNumber)) {
-            numbers.push(generatedNumber)
-        }
-    }
-
-    numbers.sort((current, next) => current - next)
+    let numbers = generate(req.query.size)
 
     res.json({numbers})
 });
