@@ -28,7 +28,7 @@ module.exports = {
     },
     local : {
       host : 'localhost',
-      ref  : 'upstream/master',
+      ref  : 'origin/master',
       repo : 'https://github.com/Capheast/minhasena-API.git',
       path : '/Users/vitorjuca/NodeProjects/minhasena-api',
       'pre-deploy-local': "echo 'This is a local executed command'",
