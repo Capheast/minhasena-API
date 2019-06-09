@@ -38,21 +38,27 @@ router.get('/setup', (req, res, next) => {
         ]
     }
 
-    setup.sorteios.highlight = [
-        {
-            "title": "Mega Sena",
-            "subTitle": "Acerte 6 números e gannhe uma bolada",
-            "text": "Sorteio atual de R$180 milhões"
-        },
-    ]
+    setup.sorteios.highlight = {
+        "title": "Fique de olho",
+        "items": [
+            {
+                "title": "Lotofácil",
+                "subTitle": "Sorteio fácil para uma ajuda no fim do mês",
+                "text": "Sorteio atual de R$420 mil"
+            },
+        ]
+    }
+    setup.sorteios.secondary = {
+        "title": "Outros",
+        "items": [
 
-    setup.sorteios.secondary = [
-        {
-            "title": "Mega Sena",
-            "subTitle": "Acerte 6 números e gannhe uma bolada",
-            "text": "Sorteio atual de R$180 milhões"
-        },
-    ]
+            {
+                "title": "Dupla Sena",
+                "subTitle": "Nem perde seu tempo",
+                "text": "Sorteio atual de R$180 milhões"
+            },
+        ]
+    }
     res.json(setup)
 })
 
