@@ -31,9 +31,9 @@ router.get('/setup', (req, res, next) => {
                 "text": "Sorteio atual de R$180 milhões"
             },
             {
-                "title": "Mega Sena",
-                "subTitle": "Acerte 6 números e gannhe uma bolada",
-                "text": "Sorteio atual de R$180 milhões"
+                "title": "Quina",
+                "subTitle": "5 números para pra te ajudar nas contas",
+                "text": "Sorteio atual de R$80 mil"
             },
         ]
     }
