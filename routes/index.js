@@ -20,8 +20,10 @@ router.get('/generate', function (req, res, next) {
 
 router.get('/setup', (req, res, next) => {
     let setup = {}
-    setup.sorteios = {
-        "ttilte": "Escolha o sorteio",
+    setup.sorteios = {}
+
+    setup.sorteios.main = {
+        "title": "Escolha o sorteio",
         "items": [
             {
                 "title": "Mega Sena",
@@ -36,7 +38,15 @@ router.get('/setup', (req, res, next) => {
         ]
     }
 
-    setup.highlight = [
+    setup.sorteios.highlight = [
+        {
+            "title": "Mega Sena",
+            "subTitle": "Acerte 6 números e gannhe uma bolada",
+            "text": "Sorteio atual de R$180 milhões"
+        },
+    ]
+
+    setup.sorteios.secondary = [
         {
             "title": "Mega Sena",
             "subTitle": "Acerte 6 números e gannhe uma bolada",
