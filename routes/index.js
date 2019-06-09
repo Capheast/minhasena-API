@@ -13,42 +13,32 @@ router.get('/generate', function (req, res, next) {
 });
 
 router.get('/setup', (req, res, next) => {
-    let setup = [
-      {"title": "Escolha o sorteio",
-    "items": [
-        {
-            "title": "Mega Sena",
-            "subTitle": "Acerte 6 números e gannhe uma bolada",
-            "text": "Sorteio atual de R$180 milhões"
-        },
-        {
-            "title": "Quina",
-            "subTitle": "5 números para pra te ajudar nas contas",
-            "text": "Sorteio atual de R$80 mil"
-        },
-    ]},
-    {
+    let setup = [{
+      "title": "Escolha o sorteio",
+      "items": [{
+       "title": "Mega Sena",
+       "subTitle": "Sorteio atual de R$180 milhões",
+       "color": "#00B758"
+      }, {
+       "title": "Quina",
+       "subTitle": "Sorteio atual de R$80 mil",
+       "color": "#42338B"
+      }]
+     }, {
       "title": "Fique de olho",
-        "items": [
-            {
-                "title": "Lotofácil",
-                "subTitle": "Sorteio fácil para uma ajuda no fim do mês",
-                "text": "Sorteio atual de R$420 mil"
-            },
-        ]
-    },
-    {
+      "items": [{
+       "title": "Lotofácil",
+       "subTitle": "Sorteio atual de R$420 mil",
+       "color": "#AB1D88"
+      }]
+     }, {
       "title": "Outros",
-        "items": [
-
-            {
-                "title": "Dupla Sena",
-                "subTitle": "Nem perde seu tempo",
-                "text": "Sorteio atual de R$180 milhões"
-            },
-        ]
-    }
-  ]
+      "items": [{
+       "title": "Dupla Sena",
+       "subTitle": "Sorteio atual de R$180 milhões",
+       "color": "#A20635"
+      }]
+     }]
     res.json(setup)
 })
 
