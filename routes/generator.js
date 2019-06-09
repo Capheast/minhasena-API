@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var generatorController = require('../src/controllers/generatorController');
+var numberController = require('../src/controllers/numberController');
 
-router.get('/', generatorController.get);
-router.post('/', generatorController.post);
-router.put('/', generatorController.put);
+router.get('/', numberController.get);
+router.post('/', numberController.post);
+router.put('/', numberController.put);
 
 module.exports = router;
