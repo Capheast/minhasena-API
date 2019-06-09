@@ -1,48 +1,44 @@
+// import {GenerateNumbers} from '../app/controllers/GenerateNumbers.js'
+
 var express = require('express');
+var generate = require('../app/controllers/GenerateNumbers.js');
 var router = express.Router();
+
 
 /* GET home page. */
 router.get('/generate', function (req, res, next) {
-
-    let numbers = []
-
-    while (numbers.length <= 6) {
-        let generatedNumber = Math.ceil(Math.random() * 60);
-        if (!numbers.includes(generatedNumber)) {
-            numbers.push(generatedNumber)
-        }
-    }
-
-    numbers.sort((current, next) => current - next)
+    let numbers = generate(req.query.size)
 
     res.json({numbers})
 });
 
 router.get('/setup', (req, res, next) => {
-    let setup = {}
-    setup.sorteios = {
-        "ttilte": "Escolha o sorteio",
-        "items": [
-            {
-                "title": "Mega Sena",
-                "subTitle": "Acerte 6 números e gannhe uma bolada",
-                "text": "Sorteio atual de R$180 milhões"
-            },
-            {
-                "title": "Mega Sena",
-                "subTitle": "Acerte 6 números e gannhe uma bolada",
-                "text": "Sorteio atual de R$180 milhões"
-            },
-        ]
-    }
-
-    setup.highlight = [
-        {
-            "title": "Mega Sena",
-            "subTitle": "Acerte 6 números e gannhe uma bolada",
-            "text": "Sorteio atual de R$180 milhões"
-        },
-    ]
+    let setup = [{
+      "title": "Escolha o sorteio",
+      "items": [{
+       "title": "Mega Sena",
+       "subTitle": "Sorteio atual de R$180 milhões",
+       "color": "#00B758"
+      }, {
+       "title": "Quina",
+       "subTitle": "Sorteio atual de R$80 mil",
+       "color": "#42338B"
+      }]
+     }, {
+      "title": "Fique de olho",
+      "items": [{
+       "title": "Lotofácil",
+       "subTitle": "Sorteio atual de R$420 mil",
+       "color": "#AB1D88"
+      }]
+     }, {
+      "title": "Outros",
+      "items": [{
+       "title": "Dupla Sena",
+       "subTitle": "Sorteio atual de R$180 milhões",
+       "color": "#A20635"
+      }]
+     }]
     res.json(setup)
 })
 
