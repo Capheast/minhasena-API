@@ -61,3 +61,5 @@ typings/
 .next
 
 minhasena.pem
+
+.env
