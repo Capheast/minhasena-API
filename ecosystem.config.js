@@ -30,7 +30,7 @@ module.exports = {
       host : 'localhost',
       ref  : 'upstream/master',
       repo : 'https://github.com/Capheast/minhasena-API.git',
-      path : '/Users/vitorjuca/NodeProjects/minhasena-api',
+      path : '/Users/vitorjuca/NodeProjects',
       'pre-deploy-local': "echo 'This is a local executed command'",
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
