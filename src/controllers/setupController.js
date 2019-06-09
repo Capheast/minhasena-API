@@ -1,7 +1,7 @@
-const numberGeneratorService = require('../services/numberGeneratorService');
+const setupService = require('../services/setupService');
 
 exports.get = (req,res,next) => {
-    let result = numberGeneratorService.generate();
+    let result = setupService.getSetup();
     res.json(result);
 }
 
