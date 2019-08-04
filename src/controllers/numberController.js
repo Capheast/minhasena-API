@@ -2,7 +2,8 @@ const numberGeneratorService = require('../services/numberGeneratorService');
 var Number = require('../models/Number');
 
 exports.get = (req, res, next) => {
-    let result = numberGeneratorService.generate();
+    const size = req.query.size || 6
+    let result = numberGeneratorService.generate(size);
     result.forEach((item) => {
         if (!!Number.find({ value: item })) {
             let number = new Number({ value: item });
