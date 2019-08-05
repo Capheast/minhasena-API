@@ -1,12 +1,6 @@
-import axios from 'axios'
+const axios = require('axios');
 
-export const getResults = (lotteryType) => {
-    axios.get(`https://www.lotodicas.com.br/api/${lotteryType}`)
-    .then(response => {
-        return response.data
-    })
-    .catch(error => {
-        console.log(error);
-    })
-    return {}
+exports.getResults = async (lotteryType) => {
+    const res = await axios.get(`https://www.lotodicas.com.br/api/${lotteryType}`)
+    return res.data
 }

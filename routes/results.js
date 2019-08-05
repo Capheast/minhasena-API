@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var numberController = require('../src/controllers/numberController');
+var resultsController = require('../src/controllers/resultsController');
 
-router.get('/results', numberController.get);
+router.get('/results', resultsController.get);
 
 module.exports = router;

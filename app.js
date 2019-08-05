@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var generatorRouter = require('./routes/generator');
 var setupRouter = require('./routes/setup');
+var results = require('./routes/results');
 
 var app = express();
 
@@ -17,5 +18,6 @@ app.use(bodyParser.json())
 
 app.use('/generate', generatorRouter);
 app.use('/setup', setupRouter);
+app.use('/result', results);
 
 module.exports = app;
