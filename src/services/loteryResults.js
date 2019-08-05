@@ -7,13 +7,24 @@ exports.getResults = async (lotteryType) => {
     Object.values(allTypes).forEach(type => {
         promises.push(axios.get(`https://www.lotodicas.com.br/api/${type}`))
     })
-    
+
     await Promise.all(promises).then(values => {
-        values.forEach(result => {
-            const lottery = {date: result.data.data, numbersDrawn: result.data.sorteio}
+        values.forEach((result, index) => {
+            const lottery = {
+                title: Object.keys(allTypes)[index],
+                date: result.data.data,
+                numbersDrawn: result.data.sorteio,
+                accumulated: result.data.valor_acumulado || ''
+            }
             lotteries.push(lottery)
         })
-    }).catch(e => {});
+    }).catch(e => {
+    });
 
-    return lotteries
+    return {
+        data: {
+            title: 'Escolha o sorteio',
+            items: lotteries
+        }
+    }
 };

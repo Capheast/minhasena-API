@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(bodyParser.json())
 
 app.use('/generate', generatorRouter);
-app.use('/setup', setupRouter);
-app.use('/result', results);
+// app.use('/setup', setupRouter);
+app.use('/setup', results);
 
 module.exports = app;
