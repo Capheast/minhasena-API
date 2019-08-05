@@ -1,10 +1,7 @@
-const lotofacil = 'lotofacil'
-const megaSena = 'mega-sena'
-const quina = 'quina'
-
-const allTypes = [ lotofacil, megaSena, quina ]
-
-exports.lotofacil
-exports.megaSena
-exports.quina
-exports.allTypes = allTypes
+export const lotofacil = 'lotofacil'
+export const megaSena = 'mega-sena'
+export const quina = 'quina'
+export const duplaSena = 'dupla-sena'
+export const lotomania = 'lotomania'
+export const timenania = 'timemania'
+export const diaDeSorte = 'dia-de-sorte'

@@ -1,19 +1,19 @@
-const axios = require('axios');
-const {allTypes} = require('./../constants/lotteryTypes')
+import axios from 'axios';
+import * as allTypes from './../constants/lotteryTypes'
 
 exports.getResults = async (lotteryType) => {
-    let promisses = []
-    let lotteries = []
-    allTypes.forEach(type => {
-        promisses.push(axios.get(`https://www.lotodicas.com.br/api/${type}`))
+    let promises = [];
+    let lotteries = [];
+    Object.values(allTypes).forEach(type => {
+        promises.push(axios.get(`https://www.lotodicas.com.br/api/${type}`))
     })
-
-    await Promise.all(promisses).then(values => {
+    
+    await Promise.all(promises).then(values => {
         values.forEach(result => {
             const lottery = {date: result.data.data, numbersDrawn: result.data.sorteio}
             lotteries.push(lottery)
         })
-    })
+    }).catch(e => {});
 
     return lotteries
 };
