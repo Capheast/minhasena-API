@@ -13,7 +13,7 @@ exports.getResults = async (lotteryType) => {
             console.log(Object.values(allTypes)[index])
             const lottery = {
                 title: Object.values(allTypes)[index].title,
-                subtitle: Object.values(allTypes)[index].subtitle,
+                subTitle: Object.values(allTypes)[index].subtitle,
                 color: Object.values(allTypes)[index].color,
                 date: result.data.data,
                 numbersDrawn: result.data.sorteio,
