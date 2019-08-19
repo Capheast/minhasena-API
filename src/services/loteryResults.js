@@ -14,7 +14,7 @@ exports.getResults = async (lotteryType) => {
             const subTitle = accumulated > 0 ? `Sorteio atual de ${accumulated.toLocaleString('pt-br', {
                 style: 'currency',
                 currency: 'BRL'
-            })}` : 'Nao acumulado'
+            })}` : 'Não acumulado'
             const lottery = {
                 title: Object.values(allTypes)[index].title,
                 subTitle: subTitle,
