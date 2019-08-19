@@ -5,15 +5,19 @@ exports.getResults = async (lotteryType) => {
     let promises = [];
     let lotteries = [];
     Object.values(allTypes).forEach(({constant}) => {
-        promises.push(axios.get(`https://www.lotodicas.com.br/api/${constant}`))
+        promises.push(axios.get(process.env.API_LOTERICA + constant))
     })
 
     await Promise.all(promises).then(values => {
         values.forEach((result, index) => {
-            console.log(Object.values(allTypes)[index])
+            const accumulated = result.data.valor_acumulado || 0
+            const subTitle = accumulated > 0 ? `Sorteio atual de ${accumulated.toLocaleString('pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            })}` : 'Nao acumulado'
             const lottery = {
                 title: Object.values(allTypes)[index].title,
-                subTitle: Object.values(allTypes)[index].subtitle,
+                subTitle: subTitle,
                 color: Object.values(allTypes)[index].color,
                 date: result.data.data,
                 numbersDrawn: result.data.sorteio,
