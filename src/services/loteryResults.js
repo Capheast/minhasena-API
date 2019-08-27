@@ -20,6 +20,7 @@ exports.getResults = async (lotteryType) => {
                 subTitle: subTitle,
                 color: Object.values(allTypes)[index].color,
                 date: result.data.data,
+                drawId: result.data.numero,
                 numbersDrawn: result.data.sorteio,
                 accumulated: result.data.valor_acumulado || ''
             }
