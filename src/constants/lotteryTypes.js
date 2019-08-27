@@ -46,7 +46,7 @@ export const lotomania = {
     }
 }
 export const timenania = {
-    title: 'Timemania', color: '#f78100', constant: 'timemania', subtitle: '',
+    title: 'Timemania', color: '#00ff48', constant: 'timemania', subtitle: '',
     configs: {
         min: 3,
         max: 10,
@@ -54,7 +54,7 @@ export const timenania = {
     }
 }
 export const diaDeSorte = {
-    title: 'Dia de Sorte', color: '#f78100', constant: 'dia-de-sorte', subtitle: '',
+    title: 'Dia de Sorte', color: '#cb852b', constant: 'dia-de-sorte', subtitle: '',
     configs: {
         min: 7,
         max: 15,
