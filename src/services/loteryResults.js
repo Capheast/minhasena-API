@@ -22,7 +22,8 @@ exports.getResults = async (lotteryType) => {
                 date: result.data.data,
                 drawId: result.data.numero,
                 numbersDrawn: result.data.sorteio,
-                accumulated: result.data.valor_acumulado || ''
+                accumulated: result.data.valor_acumulado || '',
+                configs: Object.values(allTypes)[index].configs
             }
             lotteries.push(lottery)
         })
