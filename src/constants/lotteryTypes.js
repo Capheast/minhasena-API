@@ -2,7 +2,13 @@ export const lotofacil = {
     title: 'Lotofácil',
     color: '#AB1D88',
     constant: 'lotofacil',
-    subtitle: 'Sorteio atual de R$420 mil'
+    subtitle: 'Sorteio atual de R$420 mil',
+    configs: {
+        min: 15,
+        max: 18,
+        tries: [ 11, 12, 13, 14, 15]
+    }
+
 }
 export const megaSena = {
     title: 'Mega Sena',
