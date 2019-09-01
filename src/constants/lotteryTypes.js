@@ -1,12 +1,12 @@
 export const lotofacil = {
     title: 'Lotofácil',
-    color: '#AB1D88',
+    color: '#930089',
     constant: 'lotofacil',
     subtitle: 'Sorteio atual de R$420 mil'
 }
 export const megaSena = {
     title: 'Mega Sena',
-    color: '#00B758',
+    color: '#209869',
     constant: 'mega-sena',
     subtitle: 'Sorteio atual de R$180 milhões',
     configs: {
@@ -27,7 +27,7 @@ export const quina = {
     }
 }
 export const duplaSena = {
-    title: 'Dupla Sena', color: '#897987', constant: 'dupla-sena', subtitle: '',
+    title: 'Dupla Sena', color: '#a61324', constant: 'dupla-sena', subtitle: '',
     configs: {
         min: 6,
         max: 15,
