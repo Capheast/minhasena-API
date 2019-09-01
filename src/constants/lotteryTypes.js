@@ -2,11 +2,11 @@ export const lotofacil = {
     title: 'Lotofácil',
     color: '#930089',
     constant: 'lotofacil',
-    subtitle: 'Sorteio atual de R$420 mil',
+    howToPlay: 'A Mega-Sena paga milhões para o acertador dos 6 números sorteados. Ainda é possível ganhar prêmios ao acertar 4 ou 5 números dentre os 60 disponíveis no volante de apostas. Para realizar o sonho de ser o próximo milionário, você deve marcar de 6 a 15 números do volante, podendo deixar que o sistema escolha os números para você (Surpresinha) e/ou concorrer com a mesma aposta por 2, 4 ou 8 concursos consecutivos (Teimosinha).',
     configs: {
         min: 15,
         max: 18,
-        tries: [ 11, 12, 13, 14, 15]
+        tries: [11, 12, 13, 14, 15]
     }
 
 }
@@ -14,7 +14,6 @@ export const megaSena = {
     title: 'Mega Sena',
     color: '#209869',
     constant: 'mega-sena',
-    subtitle: 'Sorteio atual de R$180 milhões',
     configs: {
         min: 6,
         max: 15,
@@ -23,9 +22,8 @@ export const megaSena = {
 }
 export const quina = {
     title: 'Quina',
-    color: '#42338B',
+    color: '#260085',
     constant: 'quina',
-    subtitle: 'Sorteio atual de R$80 mil',
     configs: {
         min: 5,
         max: 15,
@@ -44,7 +42,6 @@ export const lotomania = {
     title: 'Lotomania',
     color: '#f78100',
     constant: 'lotomania',
-    subtitle: 'Sorteio atual de R$1.6 milhões',
     configs: {
         min: 0,
         max: 50,
@@ -52,7 +49,7 @@ export const lotomania = {
     }
 }
 export const timenania = {
-    title: 'Timemania', color: '#00ff48', constant: 'timemania', subtitle: '',
+    title: 'Timemania', color: '#00ff48', constant: 'timemania',
     configs: {
         min: 3,
         max: 10,
@@ -60,7 +57,9 @@ export const timenania = {
     }
 }
 export const diaDeSorte = {
-    title: 'Dia de Sorte', color: '#cb852b', constant: 'dia-de-sorte', subtitle: '',
+    title: 'Dia de Sorte',
+    color: '#cb852b',
+    constant: 'dia-de-sorte',
     configs: {
         min: 7,
         max: 15,
