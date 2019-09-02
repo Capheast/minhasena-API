@@ -1,6 +1,6 @@
 export const lotofacil = {
     title: 'Lotofácil',
-    color: '#930089',
+    color: '#AB1D88',
     constant: 'lotofacil',
     howToPlay: 'A Mega-Sena paga milhões para o acertador dos 6 números sorteados. Ainda é possível ganhar prêmios ao acertar 4 ou 5 números dentre os 60 disponíveis no volante de apostas. Para realizar o sonho de ser o próximo milionário, você deve marcar de 6 a 15 números do volante, podendo deixar que o sistema escolha os números para você (Surpresinha) e/ou concorrer com a mesma aposta por 2, 4 ou 8 concursos consecutivos (Teimosinha).',
     configs: {
@@ -12,7 +12,7 @@ export const lotofacil = {
 }
 export const megaSena = {
     title: 'Mega Sena',
-    color: '#209869',
+    color: '#00A951',
     howToPlay: "A Lotofácil é, como o próprio nome diz, fácil de apostar e principalmente de ganhar. Você marca" +
         " entre 15 a 18 números, dentre os 25 disponíveis no volante, e fatura o prêmio se acertar 11, 12, 13, 14 ou 15 números. Pode ainda deixar que o sistema escolha os números para você por meio da Surpresinha, ou concorrer com a mesma aposta por 3, 6, 9 ou 12 concursos consecutivos através da Teimosinha.",
     constant: 'mega-sena',
@@ -24,7 +24,7 @@ export const megaSena = {
 }
 export const quina = {
     title: 'Quina',
-    color: '#260085',
+    color: '#42338B',
     howToPlay: "Concorra a prêmios grandiosos com a Quina: basta marcar de 5 a 15 números dentre os 80 disponíveis no volante e torcer. Caso prefira o sistema pode escolher os números para você através da Surpresinha." +
         +"Ganham prêmios os acertadores de 2, 3, 4 ou 5 números. Você ainda pode concorrer com a mesma aposta por 3, 6, 12, 18 ou 24 concursos consecutivos com a Teimosinha.",
     constant: 'quina',
@@ -36,7 +36,7 @@ export const quina = {
 }
 export const duplaSena = {
     title: 'Dupla Sena',
-    color: '#a61324',
+    color: '#A20635',
     constant: 'dupla-sena',
     configs: {
         min: 1,

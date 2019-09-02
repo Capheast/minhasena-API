@@ -12,7 +12,7 @@ exports.getResults = async (lotteryType) => {
         values.forEach((result, index) => {
             const accumulated = result.data.valor_acumulado || 0
             const numbersDrawn =  result.data.sorteio || ''
-            const subTitle = accumulated > 0 ? `${numbersDrawn} - Sorteio atual de ${accumulated.toLocaleString('pt-br', {
+            const subTitle = accumulated > 0 ? `Sorteio atual de ${accumulated.toLocaleString('pt-br', {
                 style: 'currency',
                 currency: 'BRL'
             })}` : 'Não acumulado'
